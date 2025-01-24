@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lista de Videos Modal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .folder-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .folder {
+            cursor: pointer;
+            text-align: center;
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            position: relative;
+            color: #FFFFFF;
+        }
+
+        .folder img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .folder:hover img {
+            transform: scale(1.05);
+        }
+
+        .modal, .inner-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #0, 0, 0, 0;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .modal-content img {
+            width: 50%;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #ffffff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .modal-info {
+            font-size: 15px;
+            color: #FFFFFF;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .modal-info h3 {
+            color: #ffcc00;
+            font-size: 22px;
+            white-space: nowrap;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .modal-info p {
+            margin: 8px 0;
+        }
+
+        .icono {
+            color: #FFFFFF;
+            margin-right: 8px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            color: #FFFFFF;
+            background-color: #FF0000;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+            display: inline-block;
+            white-space: nowrap;
+            width: auto;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #FF0000;
+        }
+
+        .video-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="folder-container">
+    <!-- Miniserie #1 -->
+<div class="folder" onclick="openModal('modalCasaUsher')">
+    <img src="https://image.tmdb.org/t/p/original/aFX5bdLKVCxFEKTwB1yLh6MCpsX.jpg" alt="La caída de la casa de Usher">
+</div>
+
+<!-- MINISERIE "LA CAÍDA DE LA CASA USHER" -->
+
+<!-- MODAL -->
+
+<div id="modalCasaUsher" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalCasaUsher')">×</span>
+        <img src="https://image.tmdb.org/t/p/original/aFX5bdLKVCxFEKTwB1yLh6MCpsX.jpg" alt="La caída de la casa de Usher">
+        <h3>LA CAÍDA DE LA CASA DE USHER</h3>
+        <div class="modal-info">
+            <p><i class="fas fa-calendar-alt icono"></i><strong>Año:</strong> 2023</p>
+            <p><i class="fas fa-film icono"></i><strong>Género:</strong> Crimen, Drama, Misterio</p>
+            <p><i class="fas fa-tv icono"></i><strong>Temporadas:</strong> 1</p>
+            <p><i class="fas fa-list icono"></i><strong>Episodios:</strong> 8</p>
+            <p><i class="fas fa-signal icono"></i><strong>Estado:</strong> Finalizada</p>
+            <p><i class="fas fa-info-circle icono"></i><strong>Sinopsis:</strong> Los despiadados hermanos Roderick y Madeline Usher han convertido a Fortunato Pharmaceuticals en un imperio de riqueza, privilegios y poder. Pero los secretos del pasado salen a la luz cuando los herederos de la dinastía Usher comienzan a morir a manos de una misteriosa mujer de su juventud.</p>
+            <div class="video-buttons">
+                <span class="button" onclick="openInnerModal('innerModalCasaUsherS1')">TEMPORADA 1</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TEMPORADA 1 -->
+
+<div id="innerModalCasaUsherS1" class="inner-modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeInnerModal('innerModalCasaUsherS1')">×</span>
+        <div class="video-buttons">
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lL3RnNXlqcXZhangwNA==" class="button" target="_blank">Episodio 1</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lL2R4ZXpwaXgybjE0Mg==" class="button" target="_blank">Episodio 2</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lLzU5NmZsc2ZtcnlxOQ==" class="button" target="_blank">Episodio 3</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lLzRobXd0ZzA5bGN0YQ==" class="button" target="_blank">Episodio 4</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lLzNnMWJtbDBzbTJncQ==" class="button" target="_blank">Episodio 5</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lL3Njb2t5eGN4OXpiaA==" class="button" target="_blank">Episodio 6</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lL2ZxYWZuY3p4NDhrYw==" class="button" target="_blank">Episodio 7</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9naGJyaXNrLmNvbS9lLzVtZ2p6ZHF2czV0Ng==" class="button" target="_blank">Episodio 8</a>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+(function() {
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    function openInnerModal(innerModalId) {
+        document.getElementById(innerModalId).style.display = "block";
+    }
+
+    function closeInnerModal(innerModalId) {
+        document.getElementById(innerModalId).style.display = "none";
+    }
+
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+    window.openInnerModal = openInnerModal;
+    window.closeInnerModal = closeInnerModal;
+})();
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Título de la página</title>
+</head>
+<body>
+    
+</body>
+</html>
