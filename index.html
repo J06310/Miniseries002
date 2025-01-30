@@ -143,15 +143,15 @@
 <div class="folder-container">
 <!-- Miniserie #1 -->
 <div class="folder" onclick="openModal('modalCasaUsher')">
-    <img src="https://image.tmdb.org/t/p/original/aFX5bdLKVCxFEKTwB1yLh6MCpsX.jpg" alt="La caída de la casa de Usher">
+    <img src="https://image.tmdb.org/t/p/original/aFX5bdLKVCxFEKTwB1yLh6MCpsX.jpg" alt="La caída de la casa de Usher"><div class="label">#1</div>
 </div>
 <!-- Miniserie #2 -->
 <div class="folder" onclick="openModal('modal1992')">
-    <img src="https://image.tmdb.org/t/p/original/brg7JhfiUDZWsKCMLi7nQK4rAi3.jpg" alt="1992">
+    <img src="https://image.tmdb.org/t/p/original/brg7JhfiUDZWsKCMLi7nQK4rAi3.jpg" alt="1992"><div class="label">#2</div>
 </div>
 <!-- Serie #5 -->
 <div class="folder" onclick="openModal('modalElLegado')">
-    <img src="https://image.tmdb.org/t/p/original/pECQZp74nRWaVy9igTyN0VUeLMu.jpg" alt="El Legado">
+    <img src="https://image.tmdb.org/t/p/original/pECQZp74nRWaVy9igTyN0VUeLMu.jpg" alt="El Legado"><div class="label">#3</div>
 </div>
 </div>
 
@@ -278,9 +278,25 @@
 
 
 
+<!-- AQUI ESTA EL CÓDIGO DE LA "ETIQUETA" -->
 
-
-
+<style>
+    .poster-container {
+        position: relative;
+        display: inline-block;
+    }
+    .label {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        background: red;
+        color: white;
+        padding: 3px 5px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+</style>
 
 <script>
 (function() {
